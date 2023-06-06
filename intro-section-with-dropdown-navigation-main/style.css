@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+html{
+    font-family: 'Epilogue', sans-serif;
+}
+
+html p{
+    font-size: 18px;
+}
+
+:root{
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: 30px;
+}
+
+/* header---------------------------------------- */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    color: var(--Medium-Gray);
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+header nav button{
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    color: var(--Medium-Gray);
+} 
+
+.logo img{
+    width: 100%;
+}
+/* nav-------------------------------------------  */
+
+.nav-desktop{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-mobile{
+    display: none;
+}
+
+/* login------------------------------------------- */
+
+.login button{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    gap: 100px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+button.register{
+    border: 2px solid var(--Almost-Black);
+}
+
+/* main--------------------------------------------- */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 100px;
+}
+
+main article{
+    width: 55%;
+}
+
+main figure{
+    width: 45%;
+}
+
+/* article----------------------------------------- */
+
+article h1{
+    font-size: 465%;
+    width: 490px;
+    margin-top: 170px;
+}
+
+article .p1{
+    color: var(--Medium-Gray);
+    width: 453px;
+    margin-top: 40px;
+    line-height: 25px;
+}
+
+article button{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 15px 30px;
+    color: var(--Almost-White);
+    font-weight: 700;
+    background-color: var(--Almost-Black);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* sponsors---------------------------------------------------- */
+
+.sponsors img{
+    margin-left: 20px;
+}
+
+/* figure----------------------------------------- */
+
+figure img{
+    width: 85%;
+}
+
+/* nav list------------------------------------------- */
+
+.nav-list{
+    background-color: var(--Almost-White);
+    border-radius: 20px;
+    color: var(--Medium-Gray);
+    display: none;
+    padding: 15px;
+    width: 180px;
+    box-shadow: 0px 0px 58px -25px var(--Almost-Black);
+    position: absolute;
+    top: 72px;
+    left: 78px;
+
+}
+
+.nav-list-element{
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+    align-items: center;
+
+
+}
+.nav-list img{
+    width: 20px;
+    object-fit: none;
+
+    
+}
+.nav-list-element.a1{
+    margin-top: 0;
+
+}
+
+.nav-list2{
+    background-color: var(--Almost-White);
+    border-radius: 20px;
+    color: var(--Medium-Gray);
+    display: none;
+    padding: 15px;
+    width: 120px;
+    box-shadow: 0px 0px 58px -25px var(--Almost-Black);
+    position: absolute;
+    top: 72px;
+    left: 275px;
+}
+
+@media only screen and (max-width: 375px){
+    header{
+        width: 100%;
+    }
+
+    heder{
+        justify-content: space-between;
+    }
+    .nav-mobile{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav-desktop{
+        display: none;
+    }
+
+    .login{
+        display: none;
+    }
+    body{
+        padding: 4px;
+    }
+    main{
+        flex-flow: wrap column-reverse;
+        padding: 4px;
+        width: 100%;
+        margin: 30px auto;
+    }
+    
+    figure{
+        width: 100%;
+    }
+
+    main article{
+        width: 100%;
+    }
+
+    article h1{
+        width: 100%;
+        text-align: center;
+        margin-top: 50px;
+        font-size: 220%;
+    }
+
+    article .p1{
+        text-align: center;
+        font-size: 105%;
+        margin-top: 25px;
+        width: 100%;
+    }
+
+    article button{
+        margin: 40px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main figure{
+        width: 100%;
+        justify-content: flex-start;
+    }
+    figure img{
+        width: 100%;
+        content: url(./images/image-hero-mobile.png);
+    }
+    .nav-list-mobile{
+        display: flex;
+        flex-flow: column;
+        background-color: red;
+        width: 250px;
+        height: 100vh;
+        padding: 50px;
+        font-size: 150%;
+        text-decoration: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+    
+    }
+    .nav-list-mobile img{
+        width: 40px;
+        
+    }
+}
+
